@@ -1,0 +1,17 @@
+[0;1;31m●[0m gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; disabled; vendor preset: enabled)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Sun 2020-11-15 06:25:38 UTC; 11s ago
+TriggeredBy: [0;1;31m●[0m gunicorn.socket
+    Process: 1611311 ExecStart=/home/roman/blog7.5assignment/chapter3blogdeployenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock mysite.wsgi:application [0;1;31m(code=exited, status=3)[0m
+   Main PID: 1611311 (code=exited, status=3)
+
+Nov 15 06:25:38 cidm6325-fall2020-sqlsantaclaus gunicorn[1611314]:   File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+Nov 15 06:25:38 cidm6325-fall2020-sqlsantaclaus gunicorn[1611314]: ModuleNotFoundError: No module named 'mysite'
+Nov 15 06:25:38 cidm6325-fall2020-sqlsantaclaus gunicorn[1611314]: [2020-11-15 06:25:38 +0000] [1611314] [INFO] Worker exiting (pid: 1611314)
+Nov 15 06:25:38 cidm6325-fall2020-sqlsantaclaus gunicorn[1611311]: [2020-11-15 06:25:38 +0000] [1611311] [INFO] Shutting down: Master
+Nov 15 06:25:38 cidm6325-fall2020-sqlsantaclaus gunicorn[1611311]: [2020-11-15 06:25:38 +0000] [1611311] [INFO] Reason: Worker failed to boot.
+Nov 15 06:25:38 cidm6325-fall2020-sqlsantaclaus systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+Nov 15 06:25:38 cidm6325-fall2020-sqlsantaclaus systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+Nov 15 06:25:38 cidm6325-fall2020-sqlsantaclaus systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Start request repeated too quickly.[0m
+Nov 15 06:25:38 cidm6325-fall2020-sqlsantaclaus systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+Nov 15 06:25:38 cidm6325-fall2020-sqlsantaclaus systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start gunicorn daemon.[0m

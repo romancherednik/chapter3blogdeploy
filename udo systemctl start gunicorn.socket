@@ -1,0 +1,12 @@
+[0;1;31m●[0m gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; disabled; vendor preset: enabled)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Sun 2020-11-15 05:50:02 UTC; 13s ago
+TriggeredBy: [0;1;32m●[0m gunicorn.socket
+    Process: 1610066 ExecStart=/home/roman/chapter3blogdeploy/chapter3blogdeployenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock mysite.wsgi:application [0;1;31m(code=exited, status=200/CHDIR)[0m
+   Main PID: 1610066 (code=exited, status=200/CHDIR)
+
+Nov 15 05:50:02 cidm6325-fall2020-sqlsantaclaus systemd[1]: Started gunicorn daemon.
+Nov 15 05:50:02 cidm6325-fall2020-sqlsantaclaus systemd[1610066]: [0;1;31m[0;1;39m[0;1;31mgunicorn.service: Changing to the requested working directory failed: No such file or directory[0m
+Nov 15 05:50:02 cidm6325-fall2020-sqlsantaclaus systemd[1610066]: [0;1;31m[0;1;39m[0;1;31mgunicorn.service: Failed at step CHDIR spawning /home/roman/chapter3blogdeploy/chapter3blogdeployenv/bin/gunicorn: No such file or directory[0m
+Nov 15 05:50:02 cidm6325-fall2020-sqlsantaclaus systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=200/CHDIR[0m
+Nov 15 05:50:02 cidm6325-fall2020-sqlsantaclaus systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m

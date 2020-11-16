@@ -25,7 +25,7 @@ SECRET_KEY = '!nz^f3aos(cyr*q#zqs+se)u$-7-ars)lr#n71%dm0*o2#!48u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['165.227.94.242', 'localhost']
 
 SITE_ID = 1
 # Application definition
@@ -80,10 +80,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blog',
-        'USER': 'blog',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
         'PASSWORD': 'IZrail92a',
+	'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -125,6 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
